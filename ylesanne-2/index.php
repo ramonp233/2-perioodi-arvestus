@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+      <meta http-equiv="refresh" content="0;URL=redirect.php" />
     <title>II perioodi arvestustöö - Ülesanne 2 - Suunamine</title>
   </head>
 
