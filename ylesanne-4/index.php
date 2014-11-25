@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <title>II perioodi arvestustöö - Ülesanne 4 - Küpsised</title>
   </head>
+  <?php
 
+  $value = "arvestus";
+
+  setcookie("Cookie", $value, time()+20);
+
+  if(!empty($_COOKIE["Cookie"])){
+        echo $value;
+  }else{
+        echo "Cookiet ei ole.";
+  }
+
+  ?>
   <body>
-    <!-- Kustuta see funktsioon (print_r() koos <pre> elemendiga) pärast seda, kui oled veendunud, et programm töötab. -->
-    <pre><?php print_r($_COOKIE); ?></pre>
+
   </body>
 </html>
