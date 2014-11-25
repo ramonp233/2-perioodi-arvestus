@@ -6,8 +6,29 @@
   </head>
 
   <body>
-    <!-- Kustuta see funktsioon (print_r() koos <pre> elemendiga) pärast seda, kui oled veendunud, et programm töötab. -->
-    <pre><?php print_r($_POST); ?></pre>
+    <?php
+
+    error_reporting(0);
+
+         $username = $_POST["username"];
+         $sex = $_POST["sex"];
+         $submit = $_POST["submit"];
+
+    if($submit == "submit"){
+       if(!empty($_POST["sex"]) && !empty($_POST["username"])){
+           echo "Tere {$username}, tundub, et olete {$sex}! ";
+       }elseif(empty($username) && empty($sex)){
+           echo "Palun minge tagasi ja täitke väljad.";
+       }elseif(empty($sex)){
+           echo "Palun minge tagasi ja valige sugu.";
+       }elseif(empty($username)){
+           echo "Palun minge tagasi ja sisestage nimi.";
+       }
+    }else{
+        echo "Tundub, et sattusid siia otseteedpidi";
+    }
+
+    ?>
 
     <div><a href="index.php">Mine tagasi</a></div>
   </body>
